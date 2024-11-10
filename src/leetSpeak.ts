@@ -37,4 +37,4 @@
         
         // Recursive case: transform the first character and recursively process the rest
         return leetSpeakSingleLetter(input[0]) + leetSpeakRek(input.slice(1));
-    }    
+    }
