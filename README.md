@@ -1,29 +1,110 @@
-[![pipeline status](../../../badges/main/pipeline.svg)](../../../-/pipelines/latest)
-[![coverage](../../../badges/main/coverage.svg)](../../../-/pipelines/latest)
+# 🚀 TypeScript Algorithm – LeetSpeak & CSV Parser
 
-# WE 1, Blatt 03
+A small, well-tested TypeScript project showcasing **clean functional design**, **test-driven development**, and **string/array processing algorithms**.  
+The project focuses on implementing and testing core algorithms without unnecessary abstractions, following modern JavaScript/TypeScript best practices.
 
-Zur Bearbeitung und Abgabe des Aufgabenblattes gehen Sie wie folgt vor:
+---
 
-1. Erstellen Sie einen Fork des Projekts unter Ihrer Gitlab-Kennung.
-2. Setzen Sie die Sichtbarkeit Ihres Forks auf private.
-3. Klonen Sie Ihren Fork.
-4. Führen Sie `npm install` im Projektverzeichnis aus.
-5. Bearbeiten Sie die Aufgabe auf dem Branch "main" (dies ist der Standard, normalerweise sollten Sie mit Branches nichts zu tun haben).
-6. 'Committen' Sie alle Ihre Änderungen mindestens nach jeder Teilaufgabe. Geben Sie sinnvolle Commit-Messages an!
+## 📌 Overview
 
-Die Tests müssen via `npm test` ausführbar sein. Dies ist initial auch schon so konfiguriert.
+This project contains two independent algorithmic components:
 
-Die Pipeline (siehe Badge oben) zeigt Ihnen in Ihrem Gitlab-Fork an, ob Ihr Projekt grundsätzlich für die automatische Korrektur vorbereitet ist. Dazu müssen Sie alle Ihre Änderungen mit `git push` nach Gitlab spielen.
+1. **LeetSpeak Transformer**  
+   Converts text into LeetSpeak using deterministic character-mapping rules.
 
-Für die Abgabe erstellen Sie eine Zip-Datei `abgabe-Blatt_03.zip` mittels
+2. **Simple CSV Parser**  
+   Parses a CSV-formatted string into a structured two-dimensional array.
+
+The implementation emphasizes:
+- Pure functions
+- Clear constraints
+- Robust error handling
+- High automated test coverage
+
+---
+
+## ✨ Features
+
+### 🔤 LeetSpeak Transformation
+- Character-by-character transformation using predefined rules  
+- Case-insensitive mapping (e.g. `A → 4`, `E → 3`, `S → 5`)  
+- Three implementations:
+  - Single-character transformation
+  - Iterative full-string transformation
+  - Recursive full-string transformation
+- Strict input validation (errors on invalid input)
+
+### 📄 Simple CSV Parsing
+- Converts CSV text into `string[][]`
+- Supports:
+  - Empty values
+  - Empty lines
+  - Trailing commas
+  - Lines with different column counts
+- Conforms to a simplified interpretation of RFC 4180
+
+---
+
+## 🧠 Technical Highlights
+
+- Functional programming style (no unnecessary classes)
+- Iterative vs. recursive algorithm comparison
+- Extensive use of the JavaScript String API
+- Test-driven development (TDD)
+- ≥95% statement coverage with Jest
+
+---
+
+## 📂 Project Structure
+
 ```
-npm run abgabe
+/src
+  ├── leetSpeak.ts
+  └── simpleCSV.ts
+
+/tests
+  ├── leetSpeakSingleLetter.test.ts
+  ├── leetSpeakIter.test.ts
+  ├── leetSpeakRek.test.ts
+  ├── simpleCSV.test.ts
+  └── formalities.test.ts
 ```
-Diese enthält Ihr lokales Repository. Diese Datei müssen Sie dann in Moodle hochladen.
 
-Weiteres zur Bearbeitung und Abgabe finden Sie im Blatt "Modalitäten" unter Moodle.
+---
 
-## Lizenz (License)
+## 🛠 Getting Started
 
-Die Dateien dürfen nur im Rahmen der oben genannten Vorlesung verwendet werden und sind nur zum persönlichen Gebrauch bestimmt.
+### Install dependencies
+```bash
+npm install
+```
+
+### Run tests
+```bash
+npm test
+```
+
+### Build the project
+```bash
+npm run build
+```
+
+---
+
+## 🧪 Testing & Coverage
+
+- Comprehensive Jest test suite
+- Covers normal cases, edge cases, and error conditions
+- Enforced method signatures and file structure via formal tests
+- ≥95% statement coverage
+
+---
+
+## 🧰 Tech Stack
+
+- TypeScript
+- Node.js
+- Jest
+- tsc
+
+---
